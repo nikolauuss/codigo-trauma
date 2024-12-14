@@ -1,0 +1,81 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Emergencia</title>
+    <link rel="stylesheet" href="{% static 'css/iniciarr.css' %}">
+</head>
+<body>
+    <div class="logo">
+        <img src="{% static 'img/logo.png' %}" alt="Logo">   
+    </div>
+    <div class="container">
+        <h1>Iniciar Emergencia</h1>
+        <p>Por favor, complete los detalles a continuación:</p>
+        <form method="POST">
+            {% csrf_token %}
+            <label for="nombre_accidentado">Nombre del Accidentado:</label>
+            <input type="text" name="nombre_accidentado" required><br>
+
+            <label for="num_victimas">Número de Víctimas:</label>
+            <select name="num_victimas" required>
+                <option value="" disabled selected>Seleccione el número de víctimas</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+            </select><br>
+
+            <label for="tipo">Tipo de Emergencia:</label>
+            <select name="tipo" required>
+                <option value="" disabled selected>Seleccione un tipo de emergencia</option>
+                <option value="natural">Natural</option>
+                <option value="catastrofe">Catástrofe</option>
+                <option value="incendio">Incendio</option>
+                <option value="inundacion">Inundación</option>
+                <option value="terremoto">Terremoto</option>
+            </select><br>
+
+            <label for="ubicacion">Ubicación:</label>
+            <input type="text" name="ubicacion" required><br>
+
+            <label for="descripcion_incidente">Descripción del Incidente:</label>
+            <textarea name="descripcion_incidente" rows="4" required></textarea><br>
+
+            <label for="gravedad">Gravedad de la Emergencia:</label>
+            <select name="gravedad" required>
+                <option value="" disabled selected>Seleccione la gravedad</option>
+                <option value="grave">Grave</option>
+                <option value="no_grave">No Grave</option>
+            </select><br>
+
+            <button type="submit">Registrar Emergencia</button>
+        </form>
+
+        {% if messages %}
+            <ul>
+                {% for message in messages %}
+                    <li>{{ message }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+
+        {% if grave_emergencia %}
+            <div class="alerta-grave">
+                <h2>¡Atención!</h2>
+                <p>Se ha registrado una emergencia grave:</p>
+                <p><strong>{{ grave_emergencia }}</strong></p>
+            </div>
+        {% endif %}
+
+        <a href="{% url 'principal' %}">Volver a la página principal</a>
+    </div>
+</body>
+</html>

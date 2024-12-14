@@ -1,0 +1,52 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Principal - Doctor</title>
+    <link rel="stylesheet" href="{% static 'css/Principal.css' %}">
+    <div class="logo">
+        <img src="{% static 'img/logo.png' %}" alt="Logo">
+    </div>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 class="main-title">Bienvenido al Sistema de Emergencias Hospitalarias - Doctor</h1>
+            <h2 class="subtitle">Gestione las Emergencias de Manera Eficiente</h2>
+        </header>
+        
+        <nav>
+            <ul>
+                <li>
+                    <a href="{% url 'iniciar_emergencia' %}" class="nav-button" title="Registra una nueva emergencia">
+                        <i class="fas fa-plus-circle"></i> Iniciar Emergencia
+                    </a>
+                </li>
+                <li>
+                    <a href="{% url 'buscar_info' %}" class="nav-button" title="Busca información sobre emergencias">
+                        <i class="fas fa-search"></i> Buscar Información
+                    </a>
+                </li>
+                <li>
+                    <a href="{% url 'logout' %}" class="nav-button" title="Cierra tu sesión">
+                        <i class="fas fa-sign-out-alt"></i> Cerrar Sesión
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <section class="info-section">
+            <h3>Detalles de Emergencias Actuales</h3>
+            <p>Como médico, puedes gestionar y supervisar las emergencias actuales, asegurándote de que se brinde la atención adecuada a todos los pacientes.</p>
+            <p>Realiza un seguimiento de las historias médicas de los pacientes y brinda atención de calidad cuando sea necesario.</p>
+            <img src="https://thumbs.dreamstime.com/b/edificio-del-hospital-59693686.jpg" alt="Doctor en Acción" class="hospital-image">
+        </section>
+        
+        <footer>
+            <p>© 2024 Sistema de Emergencias. Todos los derechos reservados.</p>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,57 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscar Información</title>
+    <link rel="stylesheet" href="{% static 'css/buscaa.css' %}">
+</head>
+<body>
+    <div class="logo">
+        <img src="{% static 'img/logo.png' %}" alt="Logo">
+    </div>
+    <div class="container">
+        <h1>Buscar Información de Emergencias</h1>
+
+        {% comment %} Inicializamos una variable para la emergencia más grave {% endcomment %}
+        {% with grave_emergencia=None %}
+            <ul>
+                {% for emergencia in emergencias %}
+                    <li>
+                        <a href="{% url 'evaluar_emergencia' emergencia.id %}">{{ emergencia }}</a>
+                        <p>Ubicación: {{ emergencia.ubicacion }}</p>
+                        <p>Número de Víctimas: {{ emergencia.num_victimas }}</p>
+                    </li>
+
+                    {% comment %} Verificamos si la emergencia actual es grave y la almacenamos {% endcomment %}
+                    {% if emergencia.gravedad == 'grave' %}
+                        {% with grave_emergencia=emergencia %}{% endwith %}
+                    {% endif %}
+                {% empty %}
+                    <li>No hay emergencias registradas en este momento.</li>
+                {% endfor %}
+            </ul>
+        {% endwith %}
+
+        {% comment %} Mostramos el mensaje si hay una emergencia grave {% endcomment %}
+        {% if grave_emergencia %}
+            <div class="alerta-grave">
+                <h2>¡Atención!</h2>
+                <p>La emergencia más grave es:</p>
+                <p><strong>{{ grave_emergencia }}</strong></p>
+                <p>Ubicación: {{ grave_emergencia.ubicacion }}</p>
+                <p>Número de Víctimas: {{ grave_emergencia.num_victimas }}</p>
+                <p>¡Actúe de inmediato!</p> <!-- Mensaje adicional para urgencia -->
+            </div>
+        {% else %}
+            <div class="alerta-sin-grave">
+                <h2>Todo en orden</h2>
+                <p>No hay emergencias graves en este momento.</p>
+            </div>
+        {% endif %}
+
+        <a href="{% url 'principal' %}" class="btn-back">Volver a la página principal</a>
+    </div>
+</body>
+</html>

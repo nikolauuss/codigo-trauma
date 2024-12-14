@@ -1,0 +1,93 @@
+/* General styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #e0f7fa; /* Fondo azul claro */
+    color: #333; /* Texto oscuro */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center; /* Centra el contenido verticalmente */
+    height: 100vh; /* Altura completa de la ventana */
+    background-image: url('https://img.freepik.com/foto-gratis/disposicion-plana-objetos-medicos-marco-vacio_23-2148502965.jpg?t=st=1728929569~exp=1728933169~hmac=8bd72819f7abfc39cb9c6ab712f3e308ddc7c81010dfab5620a7d24bb0207641&w=1380'); /* Fondo con objetos médicos */
+    background-size: cover; /* Asegura que la imagen cubra todo el fondo */
+    background-position: center; /* Centra la imagen de fondo */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+}
+
+.container {
+    background-color: white; /* Fondo blanco */
+    padding: 30px;
+    border-radius: 15px; /* Bordes más redondeados */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Sombra más pronunciada */
+    width: 350px; /* Ancho fijo */
+    text-align: center; /* Centra el texto */
+    position: relative; /* Necesario para posicionar el fondo */
+    overflow: hidden; /* Oculta el contenido desbordante */
+}
+
+.container h1, .container form {
+    position: relative; /* Asegura que el texto esté por encima del fondo */
+    z-index: 1; /* Asegura que el contenido esté por encima del fondo */
+}
+
+/* Title styles */
+h1 {
+    font-size: 2rem;
+    margin-bottom: 20px; /* Espaciado inferior */
+    color: #00796b; /* Verde azulado */
+}
+
+/* Alert message styles */
+.alert {
+    background-color: #ffe0b2; /* Fondo naranja claro */
+    color: #d65e2d; /* Texto naranja oscuro */
+    border: 1px solid #d65e2d; /* Borde naranja */
+    padding: 10px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    margin-bottom: 15px; /* Espaciado inferior */
+}
+
+/* Form styles */
+form {
+    display: flex;
+    flex-direction: column; /* Coloca los elementos uno debajo del otro */
+}
+
+input[type="text"],
+input[type="password"] {
+    padding: 12px;
+    margin-bottom: 15px; /* Espaciado inferior entre campos */
+    border: 1px solid #b2ebf2; /* Borde azul claro */
+    border-radius: 5px; /* Bordes redondeados */
+    font-size: 1rem; /* Tamaño de la fuente */
+    transition: border-color 0.3s ease; /* Transición suave */
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+    border-color: #00796b; /* Cambia el color del borde al enfocar */
+    outline: none; /* Elimina el contorno por defecto */
+}
+
+button {
+    padding: 12px;
+    background-color: #00796b; /* Verde azulado */
+    color: white; /* Texto blanco */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    font-size: 1rem; /* Tamaño de la fuente */
+    cursor: pointer; /* Cambia el cursor al pasar el mouse */
+    transition: background-color 0.3s ease; /* Efecto de transición */
+}
+
+button:hover {
+    background-color: #004d40; /* Verde más oscuro al pasar el mouse */
+}
+
+/* Footer styles */
+footer {
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: #777; /* Texto más claro */
+}

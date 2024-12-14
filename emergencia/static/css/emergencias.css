@@ -1,0 +1,104 @@
+/* Estilos generales */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #e0f7fa; /* Fondo azul claro */
+    color: #333; /* Texto oscuro */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center; /* Centra el contenido verticalmente */
+    height: 100vh; /* Altura completa de la ventana */
+    background-image: url('https://img.freepik.com/fotos-premium/estetoscopio-corazon_23-2147796456.jpg?w=1380'); /* Fondo con objetos médicos */
+    background-size: cover; /* Asegura que la imagen cubra todo el fondo */
+    background-position: center; /* Centra la imagen de fondo */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+}
+/* Contenedor principal */
+.container {
+    max-width: 600px; /* Ancho máximo */
+    margin: 20px auto; /* Centrar contenedor */
+    padding: 20px; /* Espaciado interno */
+    background-color: #ffffff; /* Fondo blanco */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+/* Título */
+h1 {
+    text-align: center; /* Centrar texto */
+    color: #4CAF50; /* Color verde para el título */
+}
+
+/* Alertas */
+.alert {
+    background-color: #ffdddd; /* Fondo claro para alertas */
+    color: #d8000c; /* Color del texto de alerta */
+    padding: 10px; /* Espaciado interno */
+    margin: 10px 0; /* Margen superior e inferior */
+    border: 1px solid #d8000c; /* Borde rojo */
+    border-radius: 4px; /* Bordes redondeados */
+}
+
+/* Estilos para el formulario */
+form {
+    display: flex; /* Usar flexbox */
+    flex-direction: column; /* Colocar elementos en columna */
+}
+
+label {
+    margin-bottom: 5px; /* Espacio debajo de las etiquetas */
+    font-weight: bold; /* Negrita */
+}
+
+input[type="number"],
+input[type="text"],
+select,
+textarea {
+    padding: 10px; /* Espaciado interno */
+    margin-bottom: 15px; /* Espacio debajo de cada campo */
+    border: 1px solid #ccc; /* Borde gris */
+    border-radius: 4px; /* Bordes redondeados */
+    font-size: 16px; /* Tamaño de fuente */
+}
+
+/* Estilo del botón */
+button {
+    padding: 10px 15px; /* Espaciado interno */
+    color: #fff; /* Color del texto */
+    background-color: #4CAF50; /* Color de fondo */
+    border: none; /* Sin borde */
+    border-radius: 4px; /* Bordes redondeados */
+    cursor: pointer; /* Cambiar cursor al pasar el mouse */
+    font-size: 16px; /* Tamaño de fuente */
+    transition: background-color 0.3s; /* Transición suave para el hover */
+}
+
+button:hover {
+    background-color: #45a049; /* Color de fondo más oscuro al pasar el mouse */
+}
+
+/* Enlace de volver */
+a {
+    text-align: center; /* Centrar texto */
+    display: block; /* Mostrar como bloque */
+    margin-top: 20px; /* Espacio superior */
+    color: #4CAF50; /* Color del enlace */
+    text-decoration: none; /* Sin subrayado */
+}
+
+a:hover {
+    text-decoration: underline; /* Subrayado al pasar el mouse */
+}
+/* Estilo para el logo */
+.logo {
+    position: absolute; /* Posición absoluta para que se mantenga en la esquina */
+    top: 10px; /* Espacio desde la parte superior */
+    left: 10px; /* Espacio desde la izquierda */
+    z-index: 1000; /* Asegura que el logo esté por encima de otros elementos */
+}
+
+.logo img {
+    width: 50px; /* Ancho del logo */
+    height: auto; /* Mantener la proporción del logo */
+}

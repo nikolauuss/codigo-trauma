@@ -1,0 +1,52 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Principal - Cliente</title>
+    <link rel="stylesheet" href="{% static 'css/Principal.css' %}">
+    <div class="logo">
+        <img src="{% static 'img/logo.png' %}" alt="Logo">
+    </div>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 class="main-title">Bienvenido al Sistema de Emergencias Hospitalarias - Cliente</h1>
+            <h2 class="subtitle">Acceso a Información de Emergencias</h2>
+        </header>
+        
+        <nav>
+            <ul>
+                <li>
+                    <a href="{% url 'informacion' %}" class="nav-button" title="Ver Detalles">
+                        <i class="fas fa-info-circle"></i> Ver Detalle
+                    </a>
+                </li>
+                <li>
+                    <a href="{% url 'logout' %}" class="nav-button" title="Cierra tu sesión">
+                        <i class="fas fa-sign-out-alt"></i> Cerrar Sesión
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <section class="info-section">
+            <h3>Información de Emergencias</h3>
+            <p>Como cliente, puedes acceder a información sobre las emergencias actuales y los servicios hospitalarios disponibles.</p>
+            <p>Asegúrate de mantenerte informado sobre las condiciones actuales de salud y los servicios de emergencia ofrecidos por el hospital.</p>
+            <ul>
+                <li><strong>Consultar Disponibilidad:</strong> Verifica la disponibilidad de servicios médicos.</li>
+                <li><strong>Revisar Historias Médicas:</strong> Accede a tus registros médicos y seguimientos.</li>
+                <li><strong>Contactar a un Médico:</strong> Haz preguntas o solicita ayuda directamente a través de nuestra plataforma.</li>
+            </ul>
+            <img src="https://thumbs.dreamstime.com/b/edificio-del-hospital-59693686.jpg" alt="Imagen del Hospital" class="hospital-image">
+        </section>
+        
+        <footer>
+            <p>© 2024 Sistema de Emergencias. Todos los derechos reservados.</p>
+        </footer>
+    </div>
+</body>
+</html>

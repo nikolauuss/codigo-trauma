@@ -1,0 +1,92 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #e0f7fa; /* Fondo azul claro */
+    color: #333; /* Texto oscuro */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center; /* Centra el contenido verticalmente */
+    height: 100vh; /* Altura completa de la ventana */
+    background-image: url('https://img.freepik.com/foto-gratis/estetoscopio-espacio-copia_23-2148519770.jpg?t=st=1728929548~exp=1728933148~hmac=9e1c2a4e26f9e1bf2132ea4ba668dfb778b5d40497bd4133be38960478aa204f&w=1380'); /* Fondo con objetos médicos */
+    background-size: cover; /* Asegura que la imagen cubra todo el fondo */
+    background-position: center; /* Centra la imagen de fondo */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco con opacidad */
+    border-radius: 15px; /* Esquinas redondeadas */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    padding: 30px;
+    max-width: 600px; /* Ancho máximo */
+    text-align: center; /* Centra el texto */
+}
+
+h1 {
+    font-size: 2.5em; /* Tamaño de fuente para el título */
+    color: #4CAF50; /* Verde para el título */
+    margin: 0 0 20px; /* Espacio debajo del título */
+}
+
+ul {
+    list-style-type: none; /* Elimina las viñetas de la lista */
+    padding: 0; /* Elimina el padding de la lista */
+    text-align: left; /* Alinea el texto a la izquierda */
+    margin: 20px 0; /* Espacio arriba y abajo */
+}
+
+li {
+    background-color: #f9f9f9; /* Fondo gris claro para los ítems de la lista */
+    border: 1px solid #ddd; /* Borde gris */
+    border-radius: 5px; /* Esquinas redondeadas */
+    padding: 15px; /* Espaciado interno */
+    margin: 10px 0; /* Espacio entre ítems */
+    transition: background-color 0.3s, transform 0.3s; /* Transición suave */
+}
+
+li:hover {
+    background-color: #e0e0e0; /* Fondo gris más oscuro al pasar el mouse */
+    transform: scale(1.02); /* Efecto de aumento al pasar el mouse */
+}
+
+a {
+    display: inline-block; /* Asegura que el enlace se comporte como un bloque */
+    color: #4CAF50; /* Color verde para el enlace */
+    text-decoration: none; /* Sin subrayado */
+    font-size: 1em; /* Tamaño de fuente */
+}
+
+a:hover {
+    text-decoration: underline; /* Subraya el enlace al pasar el mouse */
+}
+
+/* Estilo para el botón de volver */
+.btn-back {
+    background-color: #4CAF50; /* Color de fondo verde */
+    color: white; /* Texto blanco */
+    padding: 10px 20px; /* Espaciado interno */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Esquinas redondeadas */
+    font-size: 1.1em; /* Tamaño de fuente */
+    margin-top: 20px; /* Espacio arriba */
+    display: inline-block; /* Asegura que se comporte como un bloque */
+    transition: background-color 0.3s; /* Transición suave */
+}
+
+.btn-back:hover {
+    background-color: #388E3C; /* Verde más oscuro al pasar el mouse */
+}
+
+/* Estilo para el logo */
+.logo {
+    position: absolute; /* Posición absoluta para que se mantenga en la esquina */
+    top: 10px; /* Espacio desde la parte superior */
+    left: 10px; /* Espacio desde la izquierda */
+    z-index: 1000; /* Asegura que el logo esté por encima de otros elementos */
+}
+
+.logo img {
+    width: 50px; /* Ancho del logo */
+    height: auto; /* Mantener la proporción del logo */
+}

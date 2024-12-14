@@ -1,0 +1,56 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Información de Emergencias</title>
+    <link rel="stylesheet" href="{% static 'css/informacion.css' %}">
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <img src="{% static 'img/logo.png' %}" alt="Logo">
+        </div>
+        
+        <header>
+            <h1 class="main-title">Información de Emergencias</h1>
+            <h2 class="subtitle">Detalles sobre Emergencias Actuales</h2>
+        </header>
+        
+       
+
+        <section class="info-section">
+            <h3>Emergencias Registradas</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Tipo de Emergencia</th>
+                        <th>Ubicación</th>
+                        <th>Número de Víctimas</th>
+                        <th>Fecha</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for emergencia in emergencias %}
+                    <tr>
+                        <td>{{ emergencia.tipo }}</td>
+                        <td>{{ emergencia.ubicacion }}</td>
+                        <td>{{ emergencia.num_victimas }}</td>
+                        <td>{{ emergencia.fecha }}</td>  <!-- Asegúrate de que este campo esté presente en tu modelo -->
+                    </tr>
+                    {% empty %}
+                    <tr>
+                        <td colspan="4">No hay emergencias registradas en este momento.</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </section>
+        
+        <footer>
+            <p>© 2024 Sistema de Emergencias. Todos los derechos reservados.</p>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,172 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #e0f7fa; /* Fondo azul claro */
+    color: #333; /* Texto oscuro */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center; /* Centra el contenido verticalmente */
+    height: 100vh; /* Altura completa de la ventana */
+    background-image: url('https://img.freepik.com/foto-gratis/accesorios-sanitarios-dispositivos-modernos-sobre-fondo-verde_23-2148213959.jpg?w=1380&t=st=1728930401~exp=1728931001~hmac=ad615d86197b68cef3f629f9b0394e3e1e2a26b6a95a6741429622d317711e87'); /* Fondo con objetos médicos */
+    background-size: cover; /* Asegura que la imagen cubra todo el fondo */
+    background-position: center; /* Centra la imagen de fondo */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.95); /* Fondo blanco con opacidad */
+    border-radius: 15px; /* Esquinas redondeadas */
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.15); /* Sombra suave */
+    padding: 40px; /* Aumenta el padding */
+    max-width: 600px; /* Ancho máximo */
+    text-align: center; /* Centra el texto */
+    animation: fadeIn 0.5s ease; /* Animación de entrada */
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+h1 {
+    font-size: 2.5em; /* Tamaño de fuente para el título */
+    color: #4CAF50; /* Verde para el título */
+    margin: 0 0 20px; /* Espacio debajo del título */
+}
+
+label {
+    font-size: 1.2em; /* Tamaño de fuente para etiquetas */
+    margin-top: 15px; /* Espacio encima de las etiquetas */
+    display: block; /* Cada etiqueta en su propia línea */
+}
+
+input[type="number"],
+input[type="text"],
+select {
+    width: 100%; /* Ancho completo del input */
+    padding: 12px; /* Espacio interno */
+    margin: 10px 0; /* Espacio arriba y abajo */
+    border: 1px solid #ccc; /* Borde gris */
+    border-radius: 5px; /* Esquinas redondeadas */
+    font-size: 1em; /* Tamaño de fuente */
+    transition: border-color 0.3s; /* Transición suave para el borde */
+}
+
+input[type="number"]:focus,
+input[type="text"]:focus,
+select:focus {
+    border-color: #4CAF50; /* Cambia el color del borde al enfocarse */
+    outline: none; /* Elimina el contorno predeterminado */
+}
+
+button {
+    background-color: #4CAF50; /* Color de fondo verde */
+    color: white; /* Texto blanco */
+    padding: 12px 20px; /* Espaciado interno */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Esquinas redondeadas */
+    font-size: 1.1em; /* Tamaño de fuente */
+    cursor: pointer; /* Cambia el cursor al pasar el mouse */
+    transition: background-color 0.3s, transform 0.2s; /* Transición suave */
+}
+
+button:hover {
+    background-color: #388E3C; /* Verde más oscuro al pasar el mouse */
+    transform: scale(1.05); /* Aumenta ligeramente el tamaño del botón */
+}
+
+.alert {
+    background-color: #ffcccb; /* Fondo rojo claro */
+    color: #d8000c; /* Texto rojo oscuro */
+    padding: 10px; /* Espaciado interno */
+    margin: 15px 0; /* Espacio arriba y abajo */
+    border-radius: 5px; /* Esquinas redondeadas */
+}
+
+a {
+    display: inline-block; /* Asegura que el enlace se comporte como un bloque */
+    margin-top: 20px; /* Espacio encima del enlace */
+    color: #4CAF50; /* Color verde para el enlace */
+    text-decoration: none; /* Sin subrayado */
+    font-size: 1em; /* Tamaño de fuente */
+}
+
+a:hover {
+    text-decoration: underline; /* Subraya el enlace al pasar el mouse */
+}
+
+/* Estilo para el logo */
+.logo {
+    position: absolute; /* Posición absoluta para que se mantenga en la esquina */
+    top: 20px; /* Espacio desde la parte superior */
+    left: 20px; /* Espacio desde la izquierda */
+    z-index: 1000; /* Asegura que el logo esté por encima de otros elementos */
+}
+
+.logo img {
+    width: 60px; /* Ancho del logo */
+    height: auto; /* Mantener la proporción del logo */
+}
+
+/* Estilos para listas */
+ul, ol {
+    padding: 0; /* Elimina el padding predeterminado */
+    margin: 20px 0; /* Espacio arriba y abajo */
+    list-style-position: inside; /* Posiciona los marcadores dentro de la lista */
+}
+
+ul {
+    list-style-type: none; /* Elimina los puntos de las listas desordenadas */
+}
+
+li {
+    background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco semitransparente */
+    border-radius: 10px; /* Esquinas redondeadas */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15); /* Sombra suave */
+    padding: 15px; /* Espaciado interno */
+    margin: 10px 0; /* Espacio entre elementos de la lista */
+    font-size: 1.1em; /* Tamaño de fuente */
+    transition: transform 0.2s, box-shadow 0.2s; /* Transiciones suaves */
+}
+
+/* Efecto al pasar el mouse */
+li:hover {
+    transform: translateY(-3px); /* Levanta el elemento al pasar el mouse */
+    box-shadow: 0 6px 30px rgba(0, 0, 0, 0.25); /* Aumenta la sombra */
+}
+
+/* Marcadores personalizados para listas desordenadas */
+ul li:before {
+    content: '✔'; /* Usa un símbolo de verificación como marcador */
+    color: #4CAF50; /* Color verde para el marcador */
+    font-size: 1.5em; /* Tamaño del marcador */
+    margin-right: 10px; /* Espacio entre el marcador y el texto */
+}
+select {
+    background-color: #ffffff; /* Fondo blanco */
+    color: #333; /* Color del texto */
+    padding: 12px; /* Espacio interno */
+    margin: 10px 0; /* Espacio arriba y abajo */
+    border: 1px solid #ccc; /* Borde gris */
+    border-radius: 5px; /* Esquinas redondeadas */
+    font-size: 1em; /* Tamaño de fuente */
+    appearance: none; /* Elimina el estilo predeterminado del select */
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10"><polygon points="0,0 10,0 5,5" fill="#4CAF50"/></svg>'); /* Icono de flecha personalizado */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-position: right 10px center; /* Posición de la imagen */
+    background-size: 10px; /* Tamaño de la imagen */
+    transition: border-color 0.3s; /* Transición suave para el borde */
+}
+
+select:hover,
+select:focus {
+    border-color: #4CAF50; /* Cambia el color del borde al pasar el mouse o al enfocarse */
+    outline: none; /* Elimina el contorno predeterminado */
+}
+
+/* Agregar un estilo para los elementos seleccionados */
+option {
+    background-color: #ffffff; /* Fondo blanco */
+    color: #333; /* Color del texto */
+}
